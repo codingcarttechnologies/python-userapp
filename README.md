@@ -14,8 +14,10 @@ source name/bin/activate
 sudo pip install -r requirements.txt
 
 5)Make databasse migrations:
-sudo python manage.py makemigrations
-sudo python manage.py migrate
+  (i)sudo python manage.py makemigrations
+
+
+  (ii)sudo python manage.py migrate
 
 6)run the app:
 sudo python manage.py runserver
