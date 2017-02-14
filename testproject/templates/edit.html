@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<FORM><INPUT Type="button" class="btn btn-success" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+
+<h1>Edit User </h1>
+
+ <form class="form-horizontal" method="post" action="/edit-user">
+    {% csrf_token %}
+    <input type="hidden" name="userid" value="{{ user_data.id }}"/>
+    <div class="form-group">
+        <label for="username" class="col-sm-2 control-label">Username</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="username" value="{{ user_data.username }}" name="username" autocomplete="off" required placeholder="user name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="birthday" class="col-sm-2 control-label">Birthday</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="birthday" name="birthday" value="{{ user_data.birthday }}" autocomplete="off" required placeholder="birthday">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

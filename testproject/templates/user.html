@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+{% if user %}
+<FORM><INPUT Type="button" class="btn btn-success" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+<h1>User Data</h1>
+ <table style="width:60%">
+  <tr>
+    <th>Username</th>
+    <th>Birthday</th>
+    <th>Eligible</th>
+    <th>Random Number</th>
+    <th>BizzFuzz</th>
+  </tr>
+  <tr>
+    <td>{{ user_data.0.username }}</td>
+    <td>{{ user_data.0.birthday }}</td>
+    <td>{{ user_data.0.eligible }}</td>
+    <td>{{ user_data.0.random_number }}</td>
+    <td>{{ user_data.0.BizzFuzz }}</td>
+  </tr>
+</table> 
+{% else %}
+  <p>Sorry No user found</p>
+{% endif %}
+{% endblock %}
+

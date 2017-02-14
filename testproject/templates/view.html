@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<FORM><INPUT Type="button" class="btn btn-success" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+
+<h1>User Info</h1>
+ <table  class="table">
+  <tr>
+    <th>Username</th>
+    <th>Birthday</th>
+    <th>Eligible</th>
+    <th>Random Number</th>
+    <th>BizzFuzz</th>
+  </tr>
+  <tr>
+    <td>{{ user_data.0.username }}</td>
+    <td>{{ user_data.0.birthday }}</td>
+    <td>{{ user_data.0.eligible }}</td>
+    <td>{{ user_data.0.random_number }}</td>
+    <td>{{ user_data.0.BizzFuzz }}</td>
+  </tr>
+</table>
+{% endblock %}
+
+
+
+
+
